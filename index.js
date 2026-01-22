@@ -149,7 +149,6 @@ bot.on("message", async (ctx) => {
         );
       }
 
-      console.log("✅ Manager → user:", userId);
     } catch (e) {
       console.error("❌ Send error:", e);
     }
@@ -203,3 +202,16 @@ console.log("🤖 Bot started");
 
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
+
+
+/*FOR RENDER*/
+const http = require('http');
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot is running');
+}).listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
