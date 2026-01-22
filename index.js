@@ -22,7 +22,7 @@ function saveChatHistory() {
    /start – language
 ====================== */
 bot.start((ctx) => {
-  ctx.reply("Оберіть мову / Choose language", {
+  ctx.reply("Wybierz język/ Оберіть мову / Choose language", {
     reply_markup: {
       keyboard: [["🇬🇧 English"], ["🇵🇱 Polska"], ["🇺🇦 Українська"]],
       resize_keyboard: true,
