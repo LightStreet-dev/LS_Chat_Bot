@@ -131,9 +131,9 @@ bot.command("close", (ctx) => {
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
 
-/* FAKE SERVER FOR RENDER */
-const PORT = process.env.PORT || 3000;
-http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Bot is running');
-}).listen(PORT, () => console.log(`🌐 Server listening on ${PORT}`));
+// /* FAKE SERVER FOR RENDER */
+// const PORT = process.env.PORT || 3000;
+// http.createServer((req, res) => {
+//   res.writeHead(200, { 'Content-Type': 'text/plain' });
+//   res.end('Bot is running');
+// }).listen(PORT, () => console.log(`🌐 Server listening on ${PORT}`));
